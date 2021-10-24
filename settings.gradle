@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Poper"
 include ':app'
+include ':scoper'
