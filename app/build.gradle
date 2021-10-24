@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
@@ -33,6 +34,11 @@ android {
         dataBinding = true
         viewBinding = true
     }
+    task androidSourcesJar(type: Jar) {
+        classifier 'sources'
+        from android.sourceSets.main.java.srcDirs
+    }
+
 }
 
 dependencies {
